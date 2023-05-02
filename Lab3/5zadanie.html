@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Game: Guess the number</title>
+</head>
+
+<body>
+
+    <h1>Guess the number between 0 and 100</h1>
+
+    <label for="guessInput">Your guess:</label>
+    <input type="number" id="guessInput">
+    <button onclick="checkGuess()">Check</button>
+
+    <script>
+        var targetNumber = Math.floor(Math.random() * 101); // losowanie liczby z zakresu 0-100
+        var numGuesses = 0;
+
+        function checkGuess() {
+            var guess = parseInt(document.getElementById("guessInput").value);
+
+            if (isNaN(guess) || guess < 0 || guess > 100) {
+                alert("Please enter a valid number between 0 and 100.");
+                return;
+            }
+
+            numGuesses++;
+
+            if (guess < targetNumber) {
+                alert("Too low. Try again.");
+            } else if (guess > targetNumber) {
+                alert("Too high. Try again.");
+            } else {
+                alert("Congratulations! You guessed the number in " + numGuesses + " tries.");
+                location.reload(); // przeładowanie strony
+            }
+        }
+    </script>
+
+</body>
+
+</html>

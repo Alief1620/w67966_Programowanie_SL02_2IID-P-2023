@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0 font-family: "Inter", sans-serif
+}
+
+h1 {
+    font-size: 50px
+}
+
+h4 {
+    font-size: 30px
+}
+
+html {
+    box-sizing: border-box
+}
+
+header {
+    position: sticky;
+    width: 100%;
+    background-color: gainsboro;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px 2px #aaa;
+    margin: 20px, 120px;
+    z-index: 100;
+}
+
+.d {
+    display: revert;
+    align-items: center;
+    justify-content: space-between;
+    color: red
+}
+
+.browsers {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px
+}
